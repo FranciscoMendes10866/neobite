@@ -3,6 +3,7 @@ version: "3.8"
 services:
     rabbitmq:
         image: rabbitmq:management-alpine
+        container_name: rabbitmq
         restart: always
         ports:
             - 5672:5672
@@ -27,6 +28,7 @@ services:
 
     postgres:
         image: postgres:latest
+        container_name: postgres
         restart: always
         ports:
           - 9627:5432
@@ -38,6 +40,7 @@ services:
 
     pgadmin:
         image: dpage/pgadmin4:latest
+        container_name: pgadmin
         restart: always
         environment:
             PGADMIN_DEFAULT_EMAIL: admin@pgadmin.com
