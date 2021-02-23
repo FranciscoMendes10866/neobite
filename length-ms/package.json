@@ -1,0 +1,14 @@
+{
+  "name": "length-ms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "amqplib": "^0.7.0",
+    "nodemon": "^2.0.7",
+    "sucrase": "^3.17.1"
+  },
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  }
+}

@@ -5,7 +5,7 @@ import morgan from 'morgan'
 import compression from 'compression'
 import cookieParser from 'cookie-parser'
 
-import UserRouter from './user/user.router'
+import UserRouter from './root/root.router'
 
 const { NODE_ENV } = process.env
 const app = express()
@@ -17,6 +17,6 @@ app.use(cors())
 app.use(helmet())
 app.use(cookieParser())
 app.use(compression())
-app.use('/api/users', UserRouter)
+app.use('/', UserRouter)
 
 export default app
