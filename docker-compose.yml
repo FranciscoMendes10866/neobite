@@ -16,6 +16,7 @@ services:
     redis:
         image: redis:latest
         container_name: redis
+        restart: always
         ports:
         - 5841:6379
         command: ["redis-server", "--appendonly", "yes"]
